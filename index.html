@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 
@@ -11,19 +12,17 @@
 
 <body>
 
-<div id="container" style="height: 900px;width:1600px;background:white;margin:20px 0 0;"></div>
-<input type="text" value="" id="txt">
+<div id="container" style="height: 950px;width:1450px;background:white;margin:20px"></div>
+<!--<input type="text" value="" id="txt">-->
 <div class="table" >
- <table border="1" style="text-align:center" id="table">
+ <table border="1" style="text-align:center" id="table" align="right">
  <tr>
   <th>姓名</th>
   <th>大学</th>
   <th>电话号</th>
  </tr>
  </table>
-
-
-
+</div>
 <script type="text/javascript">
     var studentArry=[['北京','张沛然','清华大学','18604308675']
         ,['北京','李慕尧','北京大学','13844885588']
@@ -114,7 +113,7 @@
             {
                 name: '中国',
                 type: 'map',
-                mapType: 'china',roam:'true',zoom:'1',
+                mapType: 'china',roam:'true',zoom:'1.5',
                 label: {
                     normal: {
                         show: true,//显示省份标签
@@ -148,7 +147,7 @@
         var tab=document.getElementById("table");
         var rowNum=tab.rows.length;
         for(var i=0;i<rowNum-1;i++){tab.deleteRow(1);} //清空表格
-        document.getElementById("txt").value = param.name;
+       // document.getElementById("txt").value = param.name;
         for (var i = 0; i < studentArry.length; i++) {
             if (studentArry[i][0]===param.name){
                 console.log(studentArry[i]);
