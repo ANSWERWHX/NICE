@@ -151,9 +151,11 @@
             if (studentArry[i][0]===param.name){
                 console.log(studentArry[i]);
                 var cRow=tab.insertRow(1);
-                for(var t=0;t<tab.rows.item(0).cells.length;t++){
-                    cRow.insertCell(t).innerHTML =studentArry[i][t+1] ; //用循环把每个数据插入第一行的每一列
-                }
+                for(var t=0;t<tab.rows.item(0).cells.length;t++){var tmpText="<p><font color='#66ccff' size='6' face='楷体'>";
+				tmpText+=studentArry[i][t+1];
+				tmpText+="</font></p>"
+				console.log(tmpText)
+                  cRow.insertCell(t).innerHTML =tmpText ;
 
             }
         }
